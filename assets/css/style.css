@@ -1,10 +1,13 @@
 .box {
-    width: 200px;
-    height: 200px;
+    width: 600px;
+    height: 600px;
     background-color: aqua;
     border-radius: 1px;
 }
 
-.btn {
-
+.button {
+    border-radius: 1px;
+    color: pink;
+    width: 20px;
+    height: 20px;
 }

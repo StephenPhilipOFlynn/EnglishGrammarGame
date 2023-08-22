@@ -1,3 +1,6 @@
+let questionIndex = 0;
+let score = 0;
+
 let correctAns = 7;
 
 function onSubmit() {
@@ -27,3 +30,24 @@ function onNext() {
   let resP = nextButton.nextElementSibling;
   resP.innerHTML = "";
 };
+
+
+const questions = [
+  {
+  question: "Ireland",
+  answers: [
+  { text: "Wellington", correct: false},
+  { text: "Glasgow", correct: false},
+  { text: "Dublin", correct: true},
+  { text: "Ottawa", correct: false},
+]
+},
+{
+  question: "Egypt",
+  answers: [
+  { text: "Taipei", correct: false},
+  { text: "Bratislava", correct: false},
+  { text: "Dakar", correct: false},
+  { text: "Cairo", correct: true},
+]
+},

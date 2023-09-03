@@ -1,3 +1,37 @@
+const questions1 = [
+  {
+  question: "The cat ______ on the fence",
+  answers: [
+  { text: "sit", correct: false},
+  { text: "sits", correct: true},
+]
+}]
+
+const questions2 = [
+  {
+  question: "The dog has ______ my homework",
+  answers: [
+  { text: "eaten", correct: true},
+  { text: "ate", correct: false},
+]
+}]
+
+const questions3 = [
+  {
+  question: "______ of the cities will you visit?",
+  answers: [
+  { text: "Which", correct: true},
+  { text: "When", correct: false},
+]
+}]
+
+
+
+
+
+
+
+
 let questionIndex = 0;
 let score = 0;
 
@@ -8,8 +42,9 @@ function onSubmit() {
   let resultP = document.getElementById("result");
   if (ans == correctAns) {
     resultP.innerHTML = "Correct";
+    showQuestionTwo();
   } else {
-    resultP.innerHTML = "Wrong";
+    resultP.innerHTML = "Wrong, hard luck practise more to improve your English grammar!";
   }
 }
 
@@ -31,23 +66,16 @@ function onNext() {
   resP.innerHTML = "";
 };
 
+question1 = document.getElementById("sibling");
 
-const questions = [
-  {
-  question: "Ireland",
-  answers: [
-  { text: "Wellington", correct: false},
-  { text: "Glasgow", correct: false},
-  { text: "Dublin", correct: true},
-  { text: "Ottawa", correct: false},
-]
-},
-{
-  question: "Egypt",
-  answers: [
-  { text: "Taipei", correct: false},
-  { text: "Bratislava", correct: false},
-  { text: "Dakar", correct: false},
-  { text: "Cairo", correct: true},
-]
-},
+
+function startQuiz(){
+
+}
+
+
+function question1(){
+question1.innerHTML = 
+
+}
+

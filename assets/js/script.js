@@ -1,4 +1,4 @@
-const questions1 = [
+const levelOne = [
   {
   question: "The cat ______ on the fence",
   answers: [
@@ -7,7 +7,7 @@ const questions1 = [
 ]
 }]
 
-const questions2 = [
+const levelTwo = [
   {
   question: "The dog has ______ my homework",
   answers: [
@@ -16,7 +16,7 @@ const questions2 = [
 ]
 }]
 
-const questions3 = [
+const levelThree = [
   {
   question: "______ of the cities will you visit?",
   answers: [
@@ -26,56 +26,17 @@ const questions3 = [
 }]
 
 
-
-
-
-
-
-
-let questionIndex = 0;
-let score = 0;
-
-let correctAns = 7;
-
-function onSubmit() {
-  let ans = document.getElementById("answer").value;
-  let resultP = document.getElementById("result");
-  if (ans == correctAns) {
-    resultP.innerHTML = "Correct";
-    showQuestionTwo();
-  } else {
-    resultP.innerHTML = "Wrong, hard luck practise more to improve your English grammar!";
-  }
-}
-
-function onNext() {
-  const parentElement = document.getElementById("parent");
-  let ques = parentElement.firstElementChild;
-  correctAns = 10;
-  ques.innerHTML =
-    "What shirt did Diego Maradona wear for Argentina!";
-  let inputBox = ques.nextElementSibling;
-  inputBox.innerHTML = "";
-  let submitButton = document.getElementById("btn1");
-  let nextButton = submitButton.nextElementSibling;
-  nextButton.innerHTML = "End";
-  nextButton.onclick = () => {
-    document.body.innerHTML = "You reached the end of the quiz congratulations";
-  }
-  let resP = nextButton.nextElementSibling;
-  resP.innerHTML = "";
-};
-
-question1 = document.getElementById("sibling");
+const question1 = document.getElementById("sibling");
 
 
 function startQuiz(){
-
-}
+  question1();
+};
 
 
 function question1(){
-question1.innerHTML = 
+question1.innerHTML = levelOne.question;
+};
 
-}
+function resetQuiz(){};
 

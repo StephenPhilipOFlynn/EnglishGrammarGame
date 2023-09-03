@@ -25,18 +25,19 @@ const levelThree = [
 ]
 }]
 
-
+const introText = document.getElementById("begin")
+const ready = document.getElementById("ready")
 const question1 = document.getElementById("sibling");
 
-
 function startQuiz(){
-  question1();
-};
+  question1.innerHTML = "The cat ______ on the fence";
+  };
+
+ready.addEventListener("click", startQuiz);
 
 
-function question1(){
-question1.innerHTML = levelOne.question;
-};
 
 function resetQuiz(){};
+
+
 

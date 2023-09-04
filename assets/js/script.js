@@ -25,11 +25,15 @@ const levelThree = [
 ]
 }]
 
+let currentQuestionIndex = 0;
+
 const introText = document.getElementById("begin")
 const ready = document.getElementById("ready")
 const question1 = document.getElementById("sibling");
 
 function startQuiz(){
+  introText.style.display = "none";
+  ready.style.display = "none";
   question1.innerHTML = "The cat ______ on the fence";
   };
 

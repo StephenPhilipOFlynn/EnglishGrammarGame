@@ -36,6 +36,7 @@ const levelFour = [
 
 const levels = [levelOne, levelTwo, levelThree, levelFour];
 let currentLevel = 0;
+let currentIndex = 0;
 
 const introText = document.getElementById("begin")
 const ready = document.getElementById("ready")
@@ -44,8 +45,13 @@ const question1 = document.getElementById("sibling");
 function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
-  question1.innerHTML = "The cat ______ on the fence";
+  showQuestion();
   };
+
+function showQuestion() {
+  const currentQuestion = levels[currentLevel][currentIndex];
+  question1.innerHTML = currentQuestion.question;
+}
 
 ready.addEventListener("click", startQuiz);
 

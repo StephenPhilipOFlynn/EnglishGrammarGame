@@ -9,6 +9,24 @@ const levelOne = [
 
 const levelTwo = [
   {
+  question: "What book is _______?",
+  answers: [
+  { text: "those", correct: false},
+  { text: "that", correct: true},
+]
+}]
+
+const levelThree = [
+  {
+  question: "______ of these cities will you visit?",
+  answers: [
+  { text: "Which", correct: true},
+  { text: "When", correct: false},
+]
+}]
+
+const levelFour = [
+  {
   question: "The dog has ______ my homework",
   answers: [
   { text: "eaten", correct: true},
@@ -16,16 +34,8 @@ const levelTwo = [
 ]
 }]
 
-const levelThree = [
-  {
-  question: "______ of the cities will you visit?",
-  answers: [
-  { text: "Which", correct: true},
-  { text: "When", correct: false},
-]
-}]
-
-let currentQuestionIndex = 0;
+const levels = [levelOne, levelTwo, levelThree, levelFour];
+let currentLevel = 0;
 
 const introText = document.getElementById("begin")
 const ready = document.getElementById("ready")

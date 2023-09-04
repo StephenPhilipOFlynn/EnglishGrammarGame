@@ -41,6 +41,7 @@ let currentIndex = 0;
 const introText = document.getElementById("begin")
 const ready = document.getElementById("ready")
 const question1 = document.getElementById("sibling");
+const buttons = document.querySelectorAll(".button");
 
 function startQuiz(){
   introText.style.display = "none";
@@ -51,9 +52,18 @@ function startQuiz(){
 function showQuestion() {
   const currentQuestion = levels[currentLevel][currentIndex];
   question1.innerHTML = currentQuestion.question;
+  for (let i= 0; i < buttons.length; i++) {
+    if (currentQuestion.answers[i]) {
+      buttons[i].style.display = "block";
+      buttons[i].textContent = currentQuestion.answers[i].text;
+    } else {
+      buttons[i].style.display = "none";
+    }
+  }
 }
 
 ready.addEventListener("click", startQuiz);
+
 
 
 

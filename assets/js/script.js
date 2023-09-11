@@ -34,6 +34,16 @@ const levelFour = [
 ]
 }]
 
+const levelFive = [
+  {
+  question: "He enjoys ________ the piano in his free time",
+  answers: [
+  { text: "to play", correct: false},
+  { text: "playing", correct: true},
+]
+}]
+
+
 const levels = [levelOne, levelTwo, levelThree, levelFour];
 let currentLevel = 0;
 let currentIndex = 0;

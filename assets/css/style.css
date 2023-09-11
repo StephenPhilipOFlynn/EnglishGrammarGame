@@ -10,8 +10,8 @@ body {background-color: coral;}
 .button {
     border-radius: 5px;
     color: turquoise;
-    width: 100px;
-    height: 20px;
+    width: 200px;
+    height: 40px;
     display: block;
     margin-bottom: 10px;
 }

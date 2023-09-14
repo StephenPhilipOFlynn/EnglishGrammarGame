@@ -1,5 +1,14 @@
 const levelOne = [
   {
+  question: "The dog ______ sleeping",
+  answers: [
+  { text: "am", correct: false},
+  { text: "is", correct: true},
+]
+}]
+
+const levelOne = [
+  {
   question: "The cat ______ on the fence",
   answers: [
   { text: "sit", correct: false},

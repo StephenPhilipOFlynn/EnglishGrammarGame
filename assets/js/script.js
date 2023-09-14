@@ -43,6 +43,17 @@ const levelFive = [
 ]
 }]
 
+const levelSix =[
+  {
+  question: "My sister Ruth is ________ so much progress with her Spanish",
+  answers: [
+  { text: "making", correct: true},
+  { text: "taking", correct: false},
+]
+}]
+
+
+
 
 const levels = [levelOne, levelTwo, levelThree, levelFour];
 let currentLevel = 0;

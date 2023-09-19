@@ -20,9 +20,6 @@ const levelZero = [
   { text: "were", correct: true},
 ]
 },
-
-
-
 ]
 
 const levelOne = [

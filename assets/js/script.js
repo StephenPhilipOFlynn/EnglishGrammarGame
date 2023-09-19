@@ -1,11 +1,24 @@
-const levelOne = [
+const levelZero = [
   {
   question: "The dog ______ sleeping",
   answers: [
   { text: "am", correct: false},
   { text: "is", correct: true},
 ]
-}]
+},
+{
+  question: "What time ______ it?",
+  answers: [
+  { text: "are", correct: false},
+  { text: "is", correct: true},
+]
+}
+
+
+
+
+
+]
 
 const levelOne = [
   {
@@ -23,7 +36,8 @@ const levelTwo = [
   { text: "those", correct: false},
   { text: "that", correct: true},
 ]
-}]
+}
+]
 
 const levelThree = [
   {
@@ -32,7 +46,22 @@ const levelThree = [
   { text: "Which", correct: true},
   { text: "When", correct: false},
 ]
-}]
+},
+{
+  question: "Lets go to _________ concert.",
+  answers: [
+  { text: "their", correct: true},
+  { text: "there", correct: false},
+]
+},
+{
+  question: "She did really good _______.",
+  answers: [
+  { text: "well", correct: true},
+  { text: "good", correct: false},
+]
+},
+]
 
 const levelFour = [
   {
@@ -41,7 +70,7 @@ const levelFour = [
   { text: "eaten", correct: true},
   { text: "ate", correct: false},
 ]
-}]
+},]
 
 const levelFive = [
   {
@@ -54,10 +83,19 @@ const levelFive = [
 
 const levelSix =[
   {
-  question: "My sister Ruth is ________ so much progress with her Spanish",
+  question: "My sister Ruth is ________ so much progress with her Spanish.",
   answers: [
   { text: "making", correct: true},
   { text: "taking", correct: false},
+]
+}]
+
+const levelSeven =[
+  {
+  question: "When she was a child, she ______ be happy all the time.",
+  answers: [
+  { text: "would", correct: false},
+  { text: "used to", correct: true},
 ]
 }]
 

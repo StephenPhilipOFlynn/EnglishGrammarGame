@@ -115,7 +115,7 @@ const levelFive = [
 },
 ]
 
-const levelSix =[
+const levelSix = [
   {
   question: "My sister Ruth is ________ so much progress with her Spanish.",
   answers: [
@@ -124,7 +124,7 @@ const levelSix =[
 ]
 }]
 
-const levelSeven =[
+const levelSeven = [
   {
   question: "When she was a child, she ______ be happy all the time.",
   answers: [

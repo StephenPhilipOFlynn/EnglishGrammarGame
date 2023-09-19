@@ -12,9 +12,14 @@ const levelZero = [
   { text: "are", correct: false},
   { text: "is", correct: true},
 ]
-}
-
-
+},
+{
+  question: "We _____ talking for 2 hours.",
+  answers: [
+  { text: "was", correct: false},
+  { text: "were", correct: true},
+]
+},
 
 
 
@@ -27,7 +32,15 @@ const levelOne = [
   { text: "sit", correct: false},
   { text: "sits", correct: true},
 ]
-}]
+},
+{
+  question: "She ate _____ apple",
+  answers: [
+  { text: "an", correct: true},
+  { text: "a", correct: false},
+]
+},
+]
 
 const levelTwo = [
   {
@@ -35,6 +48,13 @@ const levelTwo = [
   answers: [
   { text: "those", correct: false},
   { text: "that", correct: true},
+]
+},
+{
+  question: "The tv show was successful and  _____ them famous.",
+  answers: [
+  { text: "make", correct: false},
+  { text: "made", correct: true},
 ]
 }
 ]
@@ -70,7 +90,9 @@ const levelFour = [
   { text: "eaten", correct: true},
   { text: "ate", correct: false},
 ]
-},]
+},
+
+]
 
 const levelFive = [
   {
@@ -79,7 +101,22 @@ const levelFive = [
   { text: "to play", correct: false},
   { text: "playing", correct: true},
 ]
-}]
+},
+{
+  question: "Have you ________ watching without me?",
+  answers: [
+  { text: "begun", correct: true},
+  { text: "began", correct: false},
+]
+},
+{
+  question: "I had _____ all night to see her.",
+  answers: [
+  { text: "drove", correct: false},
+  { text: "driven", correct: true},
+]
+},
+]
 
 const levelSix =[
   {
@@ -102,7 +139,7 @@ const levelSeven =[
 
 
 
-const levels = [levelOne, levelTwo, levelThree, levelFour];
+const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven];
 let currentLevel = 0;
 let currentIndex = 0;
 

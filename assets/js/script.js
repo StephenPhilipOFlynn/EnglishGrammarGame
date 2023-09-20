@@ -88,7 +88,6 @@ const levelFour = [
   { text: "ate", correct: false},
 ]
 },
-
 ]
 
 const levelFive = [
@@ -139,6 +138,7 @@ const levelSeven = [
 const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven];
 let currentLevel = 0;
 let currentIndex = 0;
+let currentQuestion;
 
 const introText = document.getElementById("begin")
 const ready = document.getElementById("ready")
@@ -152,17 +152,30 @@ function startQuiz(){
   };
 
 function showQuestion() {
-  const currentQuestion = levels[currentLevel][currentIndex];
+  currentQuestion = levels[currentLevel][currentIndex];
   question1.innerHTML = currentQuestion.question;
   for (let i= 0; i < buttons.length; i++) {
     if (currentQuestion.answers[i]) {
       buttons[i].style.display = "block";
       buttons[i].textContent = currentQuestion.answers[i].text;
+      buttons[i].addEventListener("click", () => chooseAnswer(i))
     } else {
       buttons[i].style.display = "none";
     }
   }
 }
+
+function chooseAnswer(i) {
+  if (currentQuestion.answers[i].correct) {
+    alert("Correct!");
+    currentLevel++;
+    currentIndex = 0;
+    showQuestion()}
+  else {
+    alert("That's sadly incorrect!");
+    startQuiz();
+  }
+};
 
 ready.addEventListener("click", startQuiz);
 

@@ -29,3 +29,16 @@ body {background-color: coral;}
 #photos > img {
     width: 100%;
 }
+
+/* styling icons */
+
+.social-networks {
+    text-align: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #ffffff;
+}

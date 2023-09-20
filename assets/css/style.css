@@ -33,8 +33,10 @@ body {background-color: coral;}
 /* styling icons */
 
 .social-networks {
-    text-align: inline;
-}
+    text-align: center;}
+
+.social-networks > li {
+    display: inline;}
 
 .social-networks i {
     font-size: 160%;

@@ -16,3 +16,16 @@ body {background-color: coral;}
     margin-bottom: 10px;
 }
 
+/* style index page photo reel */
+
+#photos {
+    clear: both;
+    line-height: 0;
+    max-width: 100%;
+    column-count: 5;
+    column-gap: 0;
+}
+
+#photos > img {
+    width: 100%;
+}

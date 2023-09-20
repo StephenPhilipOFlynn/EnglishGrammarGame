@@ -167,12 +167,10 @@ function showQuestion() {
 
 function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
-    alert("Correct!");
     currentLevel++;
     currentIndex = 0;
     showQuestion()}
   else {
-    alert("That's sadly incorrect!");
     startQuiz();
   }
 };

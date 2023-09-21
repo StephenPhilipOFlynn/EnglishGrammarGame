@@ -27,6 +27,13 @@ const levelZero = [
   { text: "am", correct: true},
 ]
 },
+{
+  question: "Some people ___ Ireland speak a different language called Gaelic.",
+  answers: [
+  { text: "on", correct: false},
+  { text: "in", correct: true},
+]
+},
 ]
 
 const levelOne = [
@@ -73,6 +80,13 @@ const levelTwo = [
   answers: [
   { text: "at", correct: false},
   { text: "on", correct: true},
+]
+},
+{
+  question: "Look at ____ horses in the distance.",
+  answers: [
+  { text: "these", correct: false},
+  { text: "those", correct: true},
 ]
 },
 ]
@@ -201,6 +215,13 @@ const levelSeven = [
   answers: [
   { text: "Did she ever ate", correct: false},
   { text: "Has she ever eaten", correct: true},
+]
+},
+{
+  question: "Stephen _______ watching chess matches.",
+  answers: [
+  { text: "'s always loved", correct: true},
+  { text: "'s always been loving", correct: false},
 ]
 },
 ]

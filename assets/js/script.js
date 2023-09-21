@@ -20,6 +20,13 @@ const levelZero = [
   { text: "were", correct: true},
 ]
 },
+{
+  question: "I ______ an English student",
+  answers: [
+  { text: "are", correct: false},
+  { text: "am", correct: true},
+]
+},
 ]
 
 const levelOne = [
@@ -88,6 +95,13 @@ const levelFour = [
   { text: "ate", correct: false},
 ]
 },
+{
+  question: "We _____ to Australia when I was five",
+  answers: [
+  { text: "moves", correct: false},
+  { text: "moved", correct: true},
+]
+},
 ]
 
 const levelFive = [
@@ -112,6 +126,13 @@ const levelFive = [
   { text: "driven", correct: true},
 ]
 },
+{
+  question: "She works as a teacher in ___ Africa.",
+  answers: [
+  { text: " ", correct: true},
+  { text: "an", correct: false},
+]
+},
 ]
 
 const levelSix = [
@@ -121,7 +142,23 @@ const levelSix = [
   { text: "making", correct: true},
   { text: "taking", correct: false},
 ]
-}]
+},
+{
+  question: "I am  ________ learn to dance.",
+  answers: [
+  { text: "going", correct: false},
+  { text: "going to", correct: true},
+]
+},
+{
+  question: "What  ________ happen if she doesn't get here on time?",
+  answers: [
+  { text: "will", correct: true},
+  { text: "going to", correct: false},
+]
+},
+]
+
 
 const levelSeven = [
   {
@@ -130,7 +167,22 @@ const levelSeven = [
   { text: "would", correct: false},
   { text: "used to", correct: true},
 ]
-}]
+},
+{
+  question: "______ you like a tea?",
+  answers: [
+  { text: "Will", correct: false},
+  { text: "Would", correct: true},
+]
+},
+{
+  question: "_____ Indian food?",
+  answers: [
+  { text: "Did she ever ate", correct: false},
+  { text: "Has she ever eaten", correct: true},
+]
+},
+]
 
 
 

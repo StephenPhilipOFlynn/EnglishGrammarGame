@@ -44,6 +44,13 @@ const levelOne = [
   { text: "a", correct: false},
 ]
 },
+{
+  question: "They _____ French. They're from Belgium",
+  answers: [
+  { text: "aren't", correct: true},
+  { text: "isn't", correct: false},
+]
+},
 ]
 
 const levelTwo = [
@@ -60,7 +67,14 @@ const levelTwo = [
   { text: "make", correct: false},
   { text: "made", correct: true},
 ]
-}
+},
+{
+  question: "They went to the park ____ Sunday.",
+  answers: [
+  { text: "at", correct: false},
+  { text: "on", correct: true},
+]
+},
 ]
 
 const levelThree = [
@@ -83,6 +97,13 @@ const levelThree = [
   answers: [
   { text: "well", correct: true},
   { text: "good", correct: false},
+]
+},
+{
+  question: "How many children _______ got?",
+  answers: [
+  { text: "they have", correct: false},
+  { text: "have they", correct: true},
 ]
 },
 ]

@@ -217,6 +217,8 @@ const levelSeven = [
   { text: "Has she ever eaten", correct: true},
 ]
 },
+]
+const levelEight = [
 {
   question: "Stephen _______ watching chess matches.",
   answers: [
@@ -229,7 +231,7 @@ const levelSeven = [
 
 
 
-const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven];
+const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven, levelEight];
 let currentLevel = 0;
 let currentIndex = 0;
 let currentQuestion;
@@ -242,6 +244,7 @@ const buttons = document.querySelectorAll(".button");
 function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
+  document.getElementById("parent").style.display = "block";
   showQuestion();
   };
 

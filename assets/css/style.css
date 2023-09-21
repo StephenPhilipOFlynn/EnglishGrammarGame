@@ -3,14 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
-    background-color: coral;
+    background-color: #2d545e;
     font-family: 'Lato', sans-serif;
+    color: white
 }
 
 .box {
     width: 600px;
     height: 600px;
-    background-color: aqua;
+    background-color: whitesmoke;
     border-radius: 1px;
 }
 
@@ -21,6 +22,12 @@ body {
     height: 40px;
     display: block;
     margin-bottom: 10px;
+}
+
+/* hide answer buttons until quiz starts */
+
+#parent {
+    display: none;
 }
 
 /* style index page photo reel */

@@ -218,6 +218,13 @@ const levelSeven = [
   { text: "Has she ever eaten", correct: true},
 ]
 },
+{
+  question: "They have not finished interviews yet, but they ____________ all candidates by next Friday",
+  answers: [
+  { text: "would see", correct: false},
+  { text: "will have seen", correct: true},
+]
+},
 ]
 const levelEight = [
 {
@@ -225,6 +232,27 @@ const levelEight = [
   answers: [
   { text: "'s always loved", correct: true},
   { text: "'s always been loving", correct: false},
+]
+},
+{
+  question: "It finished late, Isabel told me she _____ been given the wrong directions.",
+  answers: [
+  { text: "had", correct: true},
+  { text: "has", correct: false},
+]
+},
+{
+  question: "Da Vinci's lost painting, to think it was lost for years and _________.",
+  answers: [
+  { text: "has been restoring", correct: false},
+  { text: "had to be restored", correct: true},
+]
+},
+{
+  question: "I am not surprised your stomach is sore. I did say you __________ eaten that fish last night.",
+  answers: [
+  { text: "mustn't have", correct: false},
+  { text: "shouldn't have", correct: true},
 ]
 },
 ]

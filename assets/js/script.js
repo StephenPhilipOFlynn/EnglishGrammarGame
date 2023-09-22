@@ -194,7 +194,6 @@ const levelSix = [
 },
 ]
 
-
 const levelSeven = [
   {
   question: "When she was a child, she ______ be happy all the time.",
@@ -228,9 +227,6 @@ const levelEight = [
 },
 ]
 
-
-
-
 const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven, levelEight];
 let currentLevel = 0;
 let currentIndex = 0;
@@ -245,8 +241,21 @@ function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
   document.getElementById("parent").style.display = "block";
+  shuffleQuestions();
   showQuestion();
   };
+
+function shuffleQuestions() {
+  /* iterate through each level keeping same order of levels */
+  for (let i = 0; i < levels.length; i++) {
+  /* fisher-yates algorithm to randomise question chosen within each array */
+  let r = Math.floor(Math.random() * levels[i].length);
+  for (let j = 0; j < levels[i].length; j++) {
+    let temp = levels[i][j];
+    levels[i][j] = levels[i][r];
+    levels[i][r] = temp;
+  }
+}}
 
 function showQuestion() {
   currentQuestion = levels[currentLevel][currentIndex];
@@ -275,9 +284,6 @@ function chooseAnswer(i) {
 ready.addEventListener("click", startQuiz);
 
 
-
-
-function resetQuiz(){};
 
 
 

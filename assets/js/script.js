@@ -74,6 +74,13 @@ const levelOne = [
   { text: "how much", correct: false},
 ]
 },
+{
+  question: "I get _____ every morning at 8am.",
+  answers: [
+  { text: "out", correct: false},
+  { text: "up", correct: true},
+]
+},
 ]
 
 const levelTwo = [
@@ -143,6 +150,13 @@ const levelThree = [
   { text: "have they", correct: true},
 ]
 },
+{
+  question: "I don't like Colombian coffee, it is _______ strong for me.",
+  answers: [
+  { text: "too", correct: true},
+  { text: "such", correct: false},
+]
+},
 ]
 
 const levelFour = [
@@ -165,6 +179,13 @@ const levelFour = [
   answers: [
   { text: "was", correct: true},
   { text: "been", correct: false},
+]
+},
+{
+  question: "The music video was expensive to make, it ______ twenty million dollars.",
+  answers: [
+  { text: "cost", correct: false},
+  { text: "costs", correct: true},
 ]
 },
 ]
@@ -198,6 +219,13 @@ const levelFive = [
   { text: "an", correct: false},
 ]
 },
+{
+  question: "I went to ___ bed early yesterday.",
+  answers: [
+  { text: "the", correct: false},
+  { text: " ", correct: true},
+]
+},
 ]
 
 const levelSix = [
@@ -220,6 +248,20 @@ const levelSix = [
   answers: [
   { text: "will", correct: true},
   { text: "going to", correct: false},
+]
+},
+{
+  question: "He ______________ there for two years before he decided to resign.",
+  answers: [
+  { text: "had been worked", correct: false},
+  { text: "had been working", correct: true},
+]
+},
+{
+  question: "At one time it ___________ the earth was the center of the universe.",
+  answers: [
+  { text: "was being believed", correct: false},
+  { text: "was believed", correct: true},
 ]
 },
 ]
@@ -251,6 +293,13 @@ const levelSeven = [
   answers: [
   { text: "would see", correct: false},
   { text: "will have seen", correct: true},
+]
+},
+{
+  question: "You ___________ bothered making pasta, they've decided to head out.",
+  answers: [
+  { text: "needn't have", correct: true},
+  { text: "didn't have to", correct: false},
 ]
 },
 ]

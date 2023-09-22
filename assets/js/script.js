@@ -227,13 +227,14 @@ const levelEight = [
 },
 ]
 
-const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, levelFive, levelSix, levelSeven, levelEight];
+const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, 
+                levelFive, levelSix, levelSeven, levelEight];
 let currentLevel = 0;
 let currentIndex = 0;
 let currentQuestion;
 
-const introText = document.getElementById("begin")
-const ready = document.getElementById("ready")
+const introText = document.getElementById("begin");
+const ready = document.getElementById("ready");
 const question1 = document.getElementById("sibling");
 const buttons = document.querySelectorAll(".button");
 

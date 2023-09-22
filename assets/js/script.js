@@ -1,3 +1,5 @@
+// array of questions, with nine levels of difficulty
+
 const levelZero = [
   {
   question: "The dog ______ sleeping",
@@ -231,12 +233,16 @@ const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour,
                 levelFive, levelSix, levelSeven, levelEight];
 let currentLevel = 0;
 let currentIndex = 0;
+let correctAnswers = 0;
 let currentQuestion;
 
 const introText = document.getElementById("begin");
 const ready = document.getElementById("ready");
 const question1 = document.getElementById("sibling");
 const buttons = document.querySelectorAll(".button");
+
+/* If user wishes to start quiz. Randomise question order, 
+and call first question, and display questions box */
 
 function startQuiz(){
   introText.style.display = "none";
@@ -258,6 +264,8 @@ function shuffleQuestions() {
   }
 }}
 
+// Display question and populate answer buttons with possible answers
+
 function showQuestion() {
   currentQuestion = levels[currentLevel][currentIndex];
   question1.innerHTML = currentQuestion.question;
@@ -272,8 +280,12 @@ function showQuestion() {
   }
 }
 
+/* If answer correct go to next array, 
+and add one point to correct answers */
+
 function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
+    correctAnswers++;
     currentLevel++;
     currentIndex = 0;
     showQuestion()}
@@ -281,6 +293,8 @@ function chooseAnswer(i) {
     startQuiz();
   }
 };
+
+// Start quiz on click of yes button
 
 ready.addEventListener("click", startQuiz);
 

@@ -29,6 +29,13 @@ const levelZero = [
   { text: "in", correct: true},
 ]
 },
+{
+  question: "I like to go to Paris _______ the summer.",
+  answers: [
+  { text: "in", correct: true},
+  { text: "on", correct: false},
+]
+},
 ]
 
 const levelOne = [
@@ -139,6 +146,13 @@ const levelFour = [
   { text: "moved", correct: true},
 ]
 },
+{
+  question: "I wanted to go to the cinema but I couldn't. I _____ studying for the test we had on Monday.",
+  answers: [
+  { text: "was", correct: true},
+  { text: "been", correct: false},
+]
+},
 ]
 
 const levelFive = [
@@ -235,7 +249,7 @@ const levelEight = [
 ]
 },
 {
-  question: "It finished late, Isabel told me she _____ been given the wrong directions.",
+  question: "The meeting finished late. Isabel told me she _____ been given the wrong directions.",
   answers: [
   { text: "had", correct: true},
   { text: "has", correct: false},

@@ -16,13 +16,6 @@ const levelZero = [
 ]
 },
 {
-  question: "We _____ talking for 2 hours.",
-  answers: [
-  { text: "was", correct: false},
-  { text: "were", correct: true},
-]
-},
-{
   question: "I ______ an English student",
   answers: [
   { text: "are", correct: false},
@@ -58,6 +51,13 @@ const levelOne = [
   answers: [
   { text: "aren't", correct: true},
   { text: "isn't", correct: false},
+]
+},
+{
+  question: "We _____ talking for 2 hours.",
+  answers: [
+  { text: "was", correct: false},
+  { text: "were", correct: true},
 ]
 },
 ]
@@ -240,6 +240,7 @@ const introText = document.getElementById("begin");
 const ready = document.getElementById("ready");
 const question1 = document.getElementById("sibling");
 const buttons = document.querySelectorAll(".button");
+const result = document.getElementById("result");
 
 /* If user wishes to start quiz. Randomise question order, 
 and call first question, and display questions box */
@@ -285,9 +286,9 @@ and add one point to correct answers */
 
 function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
-    correctAnswers++;
     currentLevel++;
     currentIndex = 0;
+    result.innerHTML = `You've scored ${correctAnswers} correct answers!`;
     showQuestion()}
   else {
     startQuiz();

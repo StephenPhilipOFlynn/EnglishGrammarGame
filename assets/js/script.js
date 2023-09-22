@@ -67,6 +67,13 @@ const levelOne = [
   { text: "were", correct: true},
 ]
 },
+{
+  question: "I want to make an omelette, _______ eggs do we have?",
+  answers: [
+  { text: "how many", correct: true},
+  { text: "how much", correct: false},
+]
+},
 ]
 
 const levelTwo = [
@@ -96,6 +103,13 @@ const levelTwo = [
   answers: [
   { text: "these", correct: false},
   { text: "those", correct: true},
+]
+},
+{
+  question: "Look at ____ trousers on sale.",
+  answers: [
+  { text: "this", correct: false},
+  { text: "these", correct: true},
 ]
 },
 ]

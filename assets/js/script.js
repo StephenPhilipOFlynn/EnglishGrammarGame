@@ -332,7 +332,7 @@ function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
   document.getElementById("parent").style.display = "block";
-  showQuestion();
+  displayNextQuestion();
   };
 
 // Display question and populate answer buttons with possible answers
@@ -347,22 +347,27 @@ function showQuestion() {
     }
   }
 
+function resetButtons() {
+  for (let i= 0; i < buttons.length; i++) {
+  buttons[i].style.display = "none";
+  buttons[i].textContent = "";
+  buttons[i].removeEventListener("click", () => chooseAnswer(i));
+}}
+
 function displayNextQuestion() {
   currentQuestion = questions[currentIndex];
   questionText.innerHTML = currentQuestion.question;
+  resetButtons();
 
   for (let i= 0; i < buttons.length; i++) {
-    if (currentQuestion.answers[i]) {
-      buttons[i].style.display = "block";
-      buttons[i].textContent = currentQuestion.answers[i].text;
-      buttons[i].addEventListener("click", () => chooseAnswer(i))
-      } else {buttons[i].style.display = "none";
+    buttons[i].style.display = "block";
+    buttons[i].textContent = currentQuestion.answers[i].text;
+    buttons[i].addEventListener("click", () => chooseAnswer(i));
     }
-  }
 }
 
 function displayResult() {
-  result.textContent = "Congrats you finished the quiz!"
+  result.textContent = "Congrats you have finished the quiz!"
   // add play again function option here //
 }
 

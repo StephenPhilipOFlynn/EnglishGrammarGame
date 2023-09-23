@@ -1,6 +1,6 @@
-// array of questions, with nine levels of difficulty
+// array of questions
 
-const levelZero = [
+const questions = [
   {
   question: "The dog ______ sleeping",
   answers: [
@@ -36,10 +36,7 @@ const levelZero = [
   { text: "on", correct: false},
 ]
 },
-]
-
-const levelOne = [
-  {
+{
   question: "The cat ______ on the fence",
   answers: [
   { text: "sit", correct: false},
@@ -81,10 +78,7 @@ const levelOne = [
   { text: "up", correct: true},
 ]
 },
-]
-
-const levelTwo = [
-  {
+{
   question: "What book is _______?",
   answers: [
   { text: "those", correct: false},
@@ -119,10 +113,7 @@ const levelTwo = [
   { text: "these", correct: true},
 ]
 },
-]
-
-const levelThree = [
-  {
+{
   question: "______ of these cities will you visit?",
   answers: [
   { text: "Which", correct: true},
@@ -157,10 +148,7 @@ const levelThree = [
   { text: "such", correct: false},
 ]
 },
-]
-
-const levelFour = [
-  {
+{
   question: "The dog has ______ my homework",
   answers: [
   { text: "eaten", correct: true},
@@ -188,10 +176,14 @@ const levelFour = [
   { text: "costs", correct: true},
 ]
 },
+{
+  question: "No sooner _______ arrived when the Chief Executive began to speak.",
+  answers: [
+  { text: "I had", correct: false},
+  { text: "had I", correct: true},
 ]
-
-const levelFive = [
-  {
+},
+{
   question: "He enjoys ________ the piano in his free time",
   answers: [
   { text: "to play", correct: false},
@@ -226,10 +218,7 @@ const levelFive = [
   { text: "_", correct: true},
 ]
 },
-]
-
-const levelSix = [
-  {
+{
   question: "My sister Ruth is ________ so much progress with her Spanish.",
   answers: [
   { text: "making", correct: true},
@@ -264,10 +253,7 @@ const levelSix = [
   { text: "was believed", correct: true},
 ]
 },
-]
-
-const levelSeven = [
-  {
+{
   question: "When she was a child, she ______ be happy all the time.",
   answers: [
   { text: "would", correct: false},
@@ -302,8 +288,6 @@ const levelSeven = [
   { text: "didn't have to", correct: false},
 ]
 },
-]
-const levelEight = [
 {
   question: "Stephen _______ watching chess matches.",
   answers: [
@@ -334,9 +318,6 @@ const levelEight = [
 },
 ]
 
-const levels = [levelZero, levelOne, levelTwo, levelThree, levelFour, 
-                levelFive, levelSix, levelSeven, levelEight];
-let currentLevel = 0;
 let currentIndex = 0;
 let correctAnswers = 0;
 let currentQuestion;
@@ -358,25 +339,20 @@ function startQuiz(){
   showQuestion();
   };
 
-/*
-function shuffleQuestions() {
-  /* iterate through each level keeping same order of levels */
-  /*
-  for (let i = 0; i < levels.length; i++) {
-  /* fisher-yates algorithm to randomise question chosen within each array
-  let r = Math.floor(Math.random() * levels[i].length);
-  for (let j = 0; j < levels[i].length; j++) {
-    let temp = levels[i][j];
-    levels[i][j] = levels[i][r];
-    levels[i][r] = temp;
-  }
-}}
-*/
+
 
 // Display question and populate answer buttons with possible answers
 
 function showQuestion() {
-  currentQuestion = levels[currentLevel][currentIndex];
+    if (currentIndex < levels.length - 1) {
+      currentLevel++;
+      currentIndex = 0;
+    } else {
+      result.textContent = "Congrats you finished the quiz";
+      return;
+    }
+  }
+  currentQuestion = levels[currentIndex];
   question1.innerHTML = currentQuestion.question;
   for (let i= 0; i < buttons.length; i++) {
     if (currentQuestion.answers[i]) {
@@ -387,26 +363,19 @@ function showQuestion() {
       buttons[i].style.display = "none";
     }
   }
-}
 
-/* If answer correct go to next array, 
-and add one point to correct answers */
+
+/* choose answer and go to next question */
 
 function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
+    correctAnswers++;
     currentIndex++;
-    result.innerHTML = "Correct!";
     showQuestion()}
   else {
     currentIndex++;
-    result.innerHTML = "Not quite!";
-    showQuestion()
+    showQuestion();
   }
-  if (currentIndex >= levels[currentLevel].length) {
-    currentIndex = 0;
-    currentLevel++;
-  }
-  showQuestion();
 };
 
 // Start quiz on click of yes button

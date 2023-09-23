@@ -319,7 +319,7 @@ const levelEight = [
 ]
 },
 {
-  question: "Da Vinci's lost painting, to think it was lost for years and _________.",
+  question: "Da Vinci's lost painting! To think it was lost for years and _________.",
   answers: [
   { text: "has been restoring", correct: false},
   { text: "had to be restored", correct: true},
@@ -393,10 +393,13 @@ function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
     currentLevel++;
     currentIndex = 0;
-    result.innerHTML = `You've scored ${correctAnswers} correct answers!`;
+    result.innerHTML = "Correct!";
     showQuestion()}
   else {
-    startQuiz();
+    currentLevel++;
+    currentIndex = 0;
+    result.innerHTML = "Not quite!";
+    showQuestion()
   }
 };
 

@@ -215,7 +215,7 @@ const levelFive = [
 {
   question: "She works as a teacher in ___ Africa.",
   answers: [
-  { text: " ", correct: true},
+  { text: "__", correct: true},
   { text: "an", correct: false},
 ]
 },
@@ -223,7 +223,7 @@ const levelFive = [
   question: "I went to ___ bed early yesterday.",
   answers: [
   { text: "the", correct: false},
-  { text: " ", correct: true},
+  { text: "_", correct: true},
 ]
 },
 ]
@@ -354,14 +354,16 @@ function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
   document.getElementById("parent").style.display = "block";
-  shuffleQuestions();
+  /* shuffleQuestions(); */
   showQuestion();
   };
 
+/*
 function shuffleQuestions() {
   /* iterate through each level keeping same order of levels */
+  /*
   for (let i = 0; i < levels.length; i++) {
-  /* fisher-yates algorithm to randomise question chosen within each array */
+  /* fisher-yates algorithm to randomise question chosen within each array
   let r = Math.floor(Math.random() * levels[i].length);
   for (let j = 0; j < levels[i].length; j++) {
     let temp = levels[i][j];
@@ -369,6 +371,7 @@ function shuffleQuestions() {
     levels[i][r] = temp;
   }
 }}
+*/
 
 // Display question and populate answer buttons with possible answers
 
@@ -391,16 +394,19 @@ and add one point to correct answers */
 
 function chooseAnswer(i) {
   if (currentQuestion.answers[i].correct) {
-    currentLevel++;
-    currentIndex = 0;
+    currentIndex++;
     result.innerHTML = "Correct!";
     showQuestion()}
   else {
-    currentLevel++;
-    currentIndex = 0;
+    currentIndex++;
     result.innerHTML = "Not quite!";
     showQuestion()
   }
+  if (currentIndex >= levels[currentLevel].length) {
+    currentIndex = 0;
+    currentLevel++;
+  }
+  showQuestion();
 };
 
 // Start quiz on click of yes button

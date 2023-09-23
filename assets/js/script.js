@@ -337,25 +337,34 @@ function startQuiz(){
 
 // Display question and populate answer buttons with possible answers
 
+//separate functions for clarity have all question been answered or are there further questions to go //
+
 function showQuestion() {
     if (currentIndex < questions.length) {
-      currentQuestion = questions[currentIndex];
-      questionText.innerHTML = currentQuestion.question;
-
-      for (let i= 0; i < buttons.length; i++) {
-        if (currentQuestion.answers[i]) {
-          buttons[i].style.display = "block";
-          buttons[i].textContent = currentQuestion.answers[i].text;
-          buttons[i].addEventListener("click", () => chooseAnswer(i))
-        } else {
-          buttons[i].style.display = "none";
-        }
+      displayNextQuestion();
     } else {
-      result.textContent = "Congrats you finished the quiz";
-      // Play again? function //
-      return;
+      displayResult();
     }
   }
+
+function displayNextQuestion() {
+  currentQuestion = questions[currentIndex];
+  questionText.innerHTML = currentQuestion.question;
+
+  for (let i= 0; i < buttons.length; i++) {
+    if (currentQuestion.answers[i]) {
+      buttons[i].style.display = "block";
+      buttons[i].textContent = currentQuestion.answers[i].text;
+      buttons[i].addEventListener("click", () => chooseAnswer(i))
+      } else {buttons[i].style.display = "none";
+    }
+  }
+}
+
+function displayResult() {
+  result.textContent = "Congrats you finished the quiz!"
+  // add play again function option here //
+}
 
 /* choose answer and go to next question */
 

@@ -324,46 +324,38 @@ let currentQuestion;
 
 const introText = document.getElementById("begin");
 const ready = document.getElementById("ready");
-const question1 = document.getElementById("sibling");
+const questionText = document.getElementById("sibling");
 const buttons = document.querySelectorAll(".button");
 const result = document.getElementById("result");
-
-/* If user wishes to start quiz. Randomise question order, 
-and call first question, and display questions box */
 
 function startQuiz(){
   introText.style.display = "none";
   ready.style.display = "none";
   document.getElementById("parent").style.display = "block";
-  /* shuffleQuestions(); */
   showQuestion();
   };
-
-
 
 // Display question and populate answer buttons with possible answers
 
 function showQuestion() {
-    if (currentIndex < levels.length - 1) {
-      currentLevel++;
-      currentIndex = 0;
+    if (currentIndex < questions.length) {
+      currentQuestion = questions[currentIndex];
+      questionText.innerHTML = currentQuestion.question;
+
+      for (let i= 0; i < buttons.length; i++) {
+        if (currentQuestion.answers[i]) {
+          buttons[i].style.display = "block";
+          buttons[i].textContent = currentQuestion.answers[i].text;
+          buttons[i].addEventListener("click", () => chooseAnswer(i))
+        } else {
+          buttons[i].style.display = "none";
+        }
     } else {
       result.textContent = "Congrats you finished the quiz";
+      // Play again? function //
       return;
     }
   }
-  currentQuestion = levels[currentIndex];
-  question1.innerHTML = currentQuestion.question;
-  for (let i= 0; i < buttons.length; i++) {
-    if (currentQuestion.answers[i]) {
-      buttons[i].style.display = "block";
-      buttons[i].textContent = currentQuestion.answers[i].text;
-      buttons[i].addEventListener("click", () => chooseAnswer(i))
-    } else {
-      buttons[i].style.display = "none";
-    }
-  }
-
 
 /* choose answer and go to next question */
 

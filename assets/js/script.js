@@ -324,7 +324,7 @@ let currentQuestion;
 
 const introText = document.getElementById("begin");
 const ready = document.getElementById("ready");
-const questionText = document.getElementById("sibling");
+const questionText = document.getElementById("questionArea");
 const buttons = document.querySelectorAll(".button");
 const result = document.getElementById("result");
 

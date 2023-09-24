@@ -370,7 +370,6 @@ function displayNextQuestion() {
 function displayResult() {
   result.textContent = "Congrats you have finished the quiz!"
   startAgain.style.display = "block";
-  startAgain.addEventListener("click", startQuiz);
   debugger
   // add play again function option here //
 }
@@ -391,6 +390,8 @@ function chooseAnswer(i) {
 // Start quiz on click of yes button
 
 ready.addEventListener("click", startQuiz);
+// event listener to reset
+startAgain.addEventListener("click", startQuiz);
 
 
 

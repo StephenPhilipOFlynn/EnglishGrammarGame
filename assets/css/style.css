@@ -9,6 +9,22 @@ body {
     text-align: center;
 }
 
+/* style start button */
+#ready {
+    margin: 0 auto;
+    border-radius: 5px;
+    color: black;
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* question box styling */
+
 #parent {
     max-width: 400px;
     height: 400px;
@@ -18,6 +34,8 @@ body {
     margin: 20px;
     text-align: center;
 }
+
+/* question buttons styling */
 
 .button {
     margin: 0 auto;
@@ -36,6 +54,7 @@ body {
 
 #parent {
     display: none;
+    color: black;
 }
 
 /* style index page photo reel */

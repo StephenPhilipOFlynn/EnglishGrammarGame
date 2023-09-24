@@ -370,6 +370,8 @@ function displayNextQuestion() {
 function displayResult() {
   result.textContent = "Congrats you have finished the quiz!"
   startAgain.style.display = "block";
+  startAgain.addEventListener("click", startQuiz);
+  debugger
   // add play again function option here //
 }
 

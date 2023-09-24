@@ -16,9 +16,11 @@ body {
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
+    text-align: center;
 }
 
 .button {
+    margin: 0 auto;
     border-radius: 5px;
     color: black;
     width: 200px;

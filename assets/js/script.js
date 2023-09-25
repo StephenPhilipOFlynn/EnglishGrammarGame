@@ -320,6 +320,7 @@ const questions = [
 
 let currentIndex = 0;
 let correctAnswers = 0;
+let incorrectAnswers = 0;
 let currentQuestion;
 
 const introText = document.getElementById("begin");
@@ -330,10 +331,11 @@ const result = document.getElementById("result");
 const startAgain = document.getElementById("startAgain");
 
 function startQuiz(){
+  ready.removeEventListener("click", startQuiz);
   introText.style.display = "none";
   ready.style.display = "none";
   document.getElementById("parent").style.display = "block";
-  displayNextQuestion();
+  showQuestion();
   };
 
 // Display question and populate answer buttons with possible answers
@@ -341,10 +343,10 @@ function startQuiz(){
 //separate functions for clarity have all question been answered or are there further questions to go //
 
 function showQuestion() {
-    if (currentIndex < questions.length) {
-      displayNextQuestion();
-    } else {
+    if (currentIndex == questions.length - 1) {
       displayResult();
+    } else {
+      displayNextQuestion();
     }
   }
 
@@ -353,6 +355,7 @@ function resetButtons() {
   buttons[i].style.display = "none";
   buttons[i].textContent = "";
   buttons[i].removeEventListener("click", () => chooseAnswer(i));
+  console.log("called")
 }}
 
 function displayNextQuestion() {
@@ -363,27 +366,28 @@ function displayNextQuestion() {
   for (let i= 0; i < buttons.length; i++) {
     buttons[i].style.display = "block";
     buttons[i].textContent = currentQuestion.answers[i].text;
+    buttons[i].removeEventListener("click", () => chooseAnswer(i));
     buttons[i].addEventListener("click", () => chooseAnswer(i));
+    console.log("hello")
     }
 }
 
 function displayResult() {
-  result.textContent = "Congrats you have finished the quiz!"
+  result.textContent = `Congrats you have finished the quiz! You scored ${correctAnswers} out of ${questions.length}`;
   startAgain.style.display = "block";
-  debugger
   // add play again function option here //
 }
 
 /* choose answer and go to next question */
 
 function chooseAnswer(i) {
+  currentIndex++;
+  showQuestion();
   if (currentQuestion.answers[i].correct) {
-    correctAnswers++;
-    currentIndex++;
-    showQuestion()}
+    correctAnswers++
+  }
   else {
-    currentIndex++;
-    showQuestion();
+    incorrectAnswers++
   }
 };
 
@@ -391,7 +395,7 @@ function chooseAnswer(i) {
 
 ready.addEventListener("click", startQuiz);
 // event listener to reset
-startAgain.addEventListener("click", startQuiz);
+// startAgain.addEventListener("click", startQuiz);
 
 
 

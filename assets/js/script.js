@@ -375,16 +375,7 @@ function displayResult() {
 
 /* choose answer and go to next question */
 
-function chooseAnswer(i) {
-  currentIndex++;
-  showQuestion();
-  if (currentQuestion.answers[i].correct) {
-    correctAnswers++
-  }
-  else {
-    incorrectAnswers++
-  }
-};
+function 
 
 // Start quiz on click of yes button
 

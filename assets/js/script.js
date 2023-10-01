@@ -318,6 +318,7 @@ const questions = [
 },
 ]
 
+// Set event listeners for selecting answers
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".button");
   buttons.forEach(button => {
@@ -373,17 +374,16 @@ function displayResult() {
     Wow! Your grammar knowledge is at upper-intermediate or advanced level. Impressive!`;} 
     else if (correctAnswers >= 30) {
     result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
-    Well done! Your grammar knowledge is at an intermediate level. Keep working hard at it and you'll improve!`;}
+    Well done! Your grammar knowledge is at an intermediate level or above. Keep working hard and you will improve!`;}
     else {
       result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
-      Well done but there is plenty of room for improvement with your grammar. Keep working hard at it and you'll improve!`;}
+      We estimate your grammar is at pre-intermediate level or below. Keep working hard and you will improve!`;}
     startAgain.style.display = "block";
   // add play again function option here //
 }
 
-/* choose answer and go to next question */
-
 function checkAnswer(e) {
+  /* check answer and go to next question */
   const selectedAnswer = e.target.textContent;
   const isCorrect = currentQuestion.answers.some(answer => answer.text === selectedAnswer && answer.correct);
 
@@ -399,7 +399,6 @@ function checkAnswer(e) {
 }
 
 // Start quiz on click of 'I'm Ready' button
-
 ready.addEventListener("click", startQuiz);
 // event listener to reset
 // startAgain.addEventListener("click", startQuiz);

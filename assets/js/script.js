@@ -318,6 +318,13 @@ const questions = [
 },
 ]
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach(button => {
+    button.addEventListener("click", checkAnswer);
+  });
+});
+
 let currentIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;

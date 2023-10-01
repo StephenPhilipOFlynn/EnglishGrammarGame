@@ -375,7 +375,20 @@ function displayResult() {
 
 /* choose answer and go to next question */
 
-function 
+function checkAnswer(e) {
+  const selectedAnswer = e.target.textContent;
+  const isCorrect = currentQuestion.answers.some(answer => answer.text === selectedAnswer && answer.correct);
+
+  currentIndex++;
+
+  if (isCorrect) {
+    correctAnswers++;
+  } else {
+    incorrectAnswers++;
+  }
+
+  showQuestion();
+}
 
 // Start quiz on click of yes button
 

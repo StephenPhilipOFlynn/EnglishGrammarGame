@@ -350,25 +350,13 @@ function showQuestion() {
     }
   }
 
-function resetButtons() {
-  for (let i= 0; i < buttons.length; i++) {
-  buttons[i].style.display = "none";
-  buttons[i].textContent = "";
-  buttons[i].removeEventListener("click", () => chooseAnswer(i));
-  console.log("called")
-}}
-
 function displayNextQuestion() {
   currentQuestion = questions[currentIndex];
   questionText.innerHTML = currentQuestion.question;
-  resetButtons();
 
   for (let i= 0; i < buttons.length; i++) {
     buttons[i].style.display = "block";
     buttons[i].textContent = currentQuestion.answers[i].text;
-    buttons[i].removeEventListener("click", () => chooseAnswer(i));
-    buttons[i].addEventListener("click", () => chooseAnswer(i));
-    console.log("hello")
     }
 }
 

@@ -368,8 +368,16 @@ function displayNextQuestion() {
 }
 
 function displayResult() {
-  result.textContent = `Congrats you have finished the quiz! You scored ${correctAnswers} out of ${questions.length}`;
-  startAgain.style.display = "block";
+  if (correctAnswers >= 40) {
+    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+    Wow! Your grammar knowledge is at upper-intermediate or advanced level. Impressive!`;} 
+    else if (correctAnswers >= 30) {
+    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+    Well done! Your grammar knowledge is at an intermediate level. Keep working hard at it and you'll improve!`;}
+    else {
+      result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+      Well done but there is plenty of room for improvement with your grammar. Keep working hard at it and you'll improve!`;}
+    startAgain.style.display = "block";
   // add play again function option here //
 }
 
@@ -390,7 +398,7 @@ function checkAnswer(e) {
   showQuestion();
 }
 
-// Start quiz on click of yes button
+// Start quiz on click of 'I'm Ready' button
 
 ready.addEventListener("click", startQuiz);
 // event listener to reset

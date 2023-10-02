@@ -1,4 +1,5 @@
 // array of questions
+// array of questions
 
 const questions = [
   {
@@ -6,12 +7,14 @@ const questions = [
   answers: [
   { text: "am", correct: false},
   { text: "is", correct: true},
+  { text: "are", correct: false},
 ]
 },
 {
   question: "2. What time ______ it?",
   answers: [
   { text: "are", correct: false},
+  { text: "am", correct: false},
   { text: "is", correct: true},
 ]
 },
@@ -20,11 +23,13 @@ const questions = [
   answers: [
   { text: "are", correct: false},
   { text: "am", correct: true},
+  { text: "be", correct: false},
 ]
 },
 {
   question: "4. Some people ___ Ireland speak a different language called Gaelic.",
   answers: [
+  { text: "at", correct: false},
   { text: "on", correct: false},
   { text: "in", correct: true},
 ]
@@ -34,6 +39,7 @@ const questions = [
   answers: [
   { text: "in", correct: true},
   { text: "on", correct: false},
+  { text: "beside", correct: false},
 ]
 },
 {
@@ -41,6 +47,7 @@ const questions = [
   answers: [
   { text: "sit", correct: false},
   { text: "sits", correct: true},
+  { text: "sitted", correct: false},
 ]
 },
 {
@@ -48,6 +55,7 @@ const questions = [
   answers: [
   { text: "an", correct: true},
   { text: "a", correct: false},
+  { text: "am", correct: false},
 ]
 },
 {
@@ -55,11 +63,13 @@ const questions = [
   answers: [
   { text: "aren't", correct: true},
   { text: "isn't", correct: false},
+  { text: "ben't", correct: false},
 ]
 },
 {
   question: "9. We _____ talking for 2 hours.",
   answers: [
+  { text: "where", correct: false},
   { text: "was", correct: false},
   { text: "were", correct: true},
 ]
@@ -69,6 +79,7 @@ const questions = [
   answers: [
   { text: "how many", correct: true},
   { text: "how much", correct: false},
+  { text: "how number", correct: false},
 ]
 },
 {
@@ -76,6 +87,7 @@ const questions = [
   answers: [
   { text: "out", correct: false},
   { text: "up", correct: true},
+  { text: "by", correct: false},
 ]
 },
 {
@@ -83,11 +95,13 @@ const questions = [
   answers: [
   { text: "those", correct: false},
   { text: "that", correct: true},
+  { text: "them", correct: false},
 ]
 },
 {
   question: "13. The tv show was successful and  _____ them famous.",
   answers: [
+  { text: "taken", correct: false},
   { text: "make", correct: false},
   { text: "made", correct: true},
 ]
@@ -95,8 +109,9 @@ const questions = [
 {
   question: "14. They went to the park ____ Sunday.",
   answers: [
-  { text: "at", correct: false},
   { text: "on", correct: true},
+  { text: "at", correct: false},
+  { text: "in", correct: false},
 ]
 },
 {
@@ -104,6 +119,7 @@ const questions = [
   answers: [
   { text: "these", correct: false},
   { text: "those", correct: true},
+  { text: "dem", correct: false},
 ]
 },
 {
@@ -118,6 +134,7 @@ const questions = [
   answers: [
   { text: "Which", correct: true},
   { text: "When", correct: false},
+  { text: "Where", correct: false},
 ]
 },
 {
@@ -153,12 +170,14 @@ const questions = [
   answers: [
   { text: "eaten", correct: true},
   { text: "ate", correct: false},
+  { text: "eated", correct: false},
 ]
 },
 {
-  question: "23. We _____ to Australia when I was five",
+  question: "23. We _____ to Australia when I was five.",
   answers: [
   { text: "moves", correct: false},
+  { text: "moving", correct: false},
   { text: "moved", correct: true},
 ]
 },
@@ -181,6 +200,7 @@ const questions = [
   answers: [
   { text: "I had", correct: false},
   { text: "had I", correct: true},
+  { text: "did I", correct: false},
 ]
 },
 {
@@ -194,6 +214,7 @@ const questions = [
   question: "28. Have you ________ watching without me?",
   answers: [
   { text: "begun", correct: true},
+  { text: "starts", correct: true},
   { text: "began", correct: false},
 ]
 },
@@ -256,6 +277,7 @@ const questions = [
 {
   question: "37. When she was a child, she ______ be happy all the time.",
   answers: [
+  { text: "should", correct: false},
   { text: "would", correct: false},
   { text: "used to", correct: true},
 ]
@@ -272,12 +294,14 @@ const questions = [
   answers: [
   { text: "Did she ever ate", correct: false},
   { text: "Has she ever eaten", correct: true},
+  { text: "Did she ever eaten", correct: false},
 ]
 },
 {
   question: "40. They have not finished interviews yet, but they ____________ all candidates by next Friday",
   answers: [
   { text: "would see", correct: false},
+  { text: "plan to seen", correct: false},
   { text: "will have seen", correct: true},
 ]
 },
@@ -291,15 +315,17 @@ const questions = [
 {
   question: "42. Stephen _______ watching chess matches.",
   answers: [
+  { text: "'s always to love", correct: false},
   { text: "'s always loved", correct: true},
   { text: "'s always been loving", correct: false},
 ]
 },
 {
-  question: "43. The meeting finished late. Isabel told me she _____ been given the wrong directions.",
+  question: "43. Sorry, my love the meeting finished late. Isabel told me she _____ been given the wrong directions.",
   answers: [
   { text: "had", correct: true},
   { text: "has", correct: false},
+  { text: "have", correct: false},
 ]
 },
 {
@@ -307,13 +333,15 @@ const questions = [
   answers: [
   { text: "has been restoring", correct: false},
   { text: "had to be restored", correct: true},
+  { text: "had to have been restoring", correct: true},
 ]
 },
 {
   question: "45. I am not surprised your stomach is sore. I did say you __________ eaten that fish last night.",
   answers: [
-  { text: "mustn't have", correct: false},
   { text: "shouldn't have", correct: true},
+  { text: "mustn't have", correct: false},
+  { text: "couldn't have", correct: false},
 ]
 },
 ]

@@ -193,6 +193,7 @@ const questions = [
   answers: [
   { text: "cost", correct: false},
   { text: "costs", correct: true},
+  { text: "costed", correct: false},
 ]
 },
 {

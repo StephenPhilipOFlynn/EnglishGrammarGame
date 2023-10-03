@@ -1,5 +1,4 @@
 // array of questions
-// array of questions
 
 const questions = [
   {
@@ -127,6 +126,7 @@ const questions = [
   answers: [
   { text: "this", correct: false},
   { text: "these", correct: true},
+  { text: "that", correct: false},
 ]
 },
 {
@@ -163,6 +163,7 @@ const questions = [
   answers: [
   { text: "too", correct: true},
   { text: "such", correct: false},
+  { text: "much", correct: false},
 ]
 },
 {
@@ -184,6 +185,7 @@ const questions = [
 {
   question: "24. I wanted to go to the cinema but I couldn't. I _____ studying for the test we had on Monday.",
   answers: [
+  { text: "must", correct: false},
   { text: "was", correct: true},
   { text: "been", correct: false},
 ]
@@ -209,13 +211,14 @@ const questions = [
   answers: [
   { text: "to play", correct: false},
   { text: "playing", correct: true},
+  { text: "played", correct: false},
 ]
 },
 {
   question: "28. Have you ________ watching without me?",
   answers: [
   { text: "begun", correct: true},
-  { text: "starts", correct: true},
+  { text: "starts", correct: false},
   { text: "began", correct: false},
 ]
 },
@@ -223,6 +226,7 @@ const questions = [
   question: "29. I had _____ all night to see her.",
   answers: [
   { text: "drove", correct: false},
+  { text: "driving", correct: false},
   { text: "driven", correct: true},
 ]
 },
@@ -231,6 +235,7 @@ const questions = [
   answers: [
   { text: "__", correct: true},
   { text: "an", correct: false},
+  { text: "the", correct: false},
 ]
 },
 {
@@ -245,13 +250,16 @@ const questions = [
   answers: [
   { text: "making", correct: true},
   { text: "taking", correct: false},
+  { text: "learn", correct: false},
 ]
 },
 {
   question: "33. I am  ________ learn to dance.",
   answers: [
   { text: "going", correct: false},
+  { text: "willing", correct: false},
   { text: "going to", correct: true},
+
 ]
 },
 {
@@ -273,6 +281,7 @@ const questions = [
   answers: [
   { text: "was being believed", correct: false},
   { text: "was believed", correct: true},
+  { text: "had being believed", correct: false},
 ]
 },
 {
@@ -322,7 +331,7 @@ const questions = [
 ]
 },
 {
-  question: "43. Sorry, my love the meeting finished late. Isabel told me she _____ been given the wrong directions.",
+  question: "43. Sorry, the meeting finished late. Isabel told me she _____ been given the wrong directions.",
   answers: [
   { text: "had", correct: true},
   { text: "has", correct: false},
@@ -334,7 +343,7 @@ const questions = [
   answers: [
   { text: "has been restoring", correct: false},
   { text: "had to be restored", correct: true},
-  { text: "had to have been restoring", correct: true},
+  { text: "had to have been restoring", correct: false},
 ]
 },
 {

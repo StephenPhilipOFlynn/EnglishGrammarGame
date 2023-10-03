@@ -415,10 +415,10 @@ function displayNextQuestion() {
 }
 
 function displayResult() {
-  if (correctAnswers >= 40) {
+  if (correctAnswers >= 38) {
     result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
     Wow! Your grammar knowledge is at upper-intermediate or advanced level. Impressive!`;} 
-    else if (correctAnswers >= 30) {
+    else if (correctAnswers >= 28) {
     result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
     Well done! Your grammar knowledge is at an intermediate level or above. Keep working hard and you will improve!`;}
     else {

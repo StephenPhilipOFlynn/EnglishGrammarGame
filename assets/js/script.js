@@ -142,11 +142,13 @@ const questions = [
   answers: [
   { text: "their", correct: true},
   { text: "there", correct: false},
+  { text: "ther", correct: false},
 ]
 },
 {
-  question: "19. She did really good _______.",
+  question: "19. She did really _______.",
   answers: [
+  { text: "nice", correct: false},
   { text: "well", correct: true},
   { text: "good", correct: false},
 ]
@@ -154,6 +156,7 @@ const questions = [
 {
   question: "20. How many children _______ got?",
   answers: [
+  { text: "will they", correct: false},
   { text: "they have", correct: false},
   { text: "have they", correct: true},
 ]
@@ -243,6 +246,7 @@ const questions = [
   answers: [
   { text: "the", correct: false},
   { text: "_", correct: true},
+  { text: "mine", correct: false},
 ]
 },
 {
@@ -267,6 +271,7 @@ const questions = [
   answers: [
   { text: "will", correct: true},
   { text: "going to", correct: false},
+  { text: "might be", correct: false},
 ]
 },
 {
@@ -274,6 +279,7 @@ const questions = [
   answers: [
   { text: "had been worked", correct: false},
   { text: "had been working", correct: true},
+  { text: "must have working", correct: false},
 ]
 },
 {
@@ -297,6 +303,7 @@ const questions = [
   answers: [
   { text: "Will", correct: false},
   { text: "Would", correct: true},
+  { text: "When", correct: false},
 ]
 },
 {
@@ -320,6 +327,7 @@ const questions = [
   answers: [
   { text: "needn't have", correct: true},
   { text: "didn't have to", correct: false},
+  { text: "couldn't have", correct: false},
 ]
 },
 {

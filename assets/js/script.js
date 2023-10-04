@@ -1,5 +1,5 @@
-// array of questions
-
+/* array of English grammar questions of
+increasing difficulty */
 const questions = [
   {
   question: "1. The dog ______ sleeping",
@@ -364,7 +364,7 @@ const questions = [
 },
 ];
 
-// Set event listeners for selecting answers
+// Set event listeners for selecting answers on page load
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".button");
   buttons.forEach(button => {
@@ -372,6 +372,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* set variables for keeping track of current question
+ and correct answers */
 let currentIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
@@ -393,10 +395,11 @@ function startQuiz(){
   showQuestion();
   }
 
-// Display question and populate answer buttons with possible answers
 
-//separate functions for clarity have all question been answered or are there further questions to go //
 
+
+/* This functions decides if there is a further question to display,
+or to display the result of the quiz */
 function showQuestion() {
     if (currentIndex == questions.length - 1) {
       displayResult();
@@ -405,6 +408,8 @@ function showQuestion() {
     }
   }
 
+/*Calls the text of the next question, and
+populates the buttons with the possible answers */
 function displayNextQuestion() {
   currentQuestion = questions[currentIndex];
   questionText.innerHTML = currentQuestion.question;
@@ -415,6 +420,8 @@ function displayNextQuestion() {
     }
 }
 
+/* At the end of the quiz, depending on number of correct answers, 
+display a different message. Also displays the start again button */
 function displayResult() {
   if (correctAnswers >= 38) {
     result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
@@ -426,7 +433,6 @@ function displayResult() {
       result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
       We estimate your grammar is at pre-intermediate level or below. Keep working hard and you will improve!`;}
     startAgain.style.display = "block";
-  // add play again function option here //
 }
 
 function checkAnswer(e) {
@@ -453,10 +459,12 @@ function checkAnswer(e) {
 }, 750);
 }
 
-// Start quiz on click of 'I'm Ready' button
+// Open quiz area on click of 'I'm Ready' button
 ready.addEventListener("click", startQuiz);
 
-// start again button to reset quiz to beginning
+/* Start again button resets the quiz. It resets the
+counting variables to the beginning. Returns 
+to the first question, and resets correct answers */
 startAgain.addEventListener("click", () => {
   currentIndex = 0;
   correctAnswers = 0;

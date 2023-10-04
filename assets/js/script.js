@@ -388,6 +388,7 @@ function startQuiz(){
   ready.removeEventListener("click", startQuiz);
   introText.style.display = "none";
   ready.style.display = "none";
+  startAgain.style.display = "none"
   document.getElementById("parent").style.display = "block";
   showQuestion();
   };

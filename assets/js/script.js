@@ -364,7 +364,7 @@ const questions = [
 },
 ];
 
-// Set event listeners for selecting answers on page load
+// Set event listeners for selecting answers
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".button");
   buttons.forEach(button => {
@@ -379,6 +379,7 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 let currentQuestion;
 
+/* constants to link html elements to javascript */
 const introText = document.getElementById("begin");
 const ready = document.getElementById("ready");
 const questionText = document.getElementById("questionArea");
@@ -386,7 +387,9 @@ const buttons = document.querySelectorAll(".button");
 const result = document.getElementById("result");
 const startAgain = document.getElementById("startAgain");
 
-function startQuiz(){
+/* Removes the intro text and 'I'm Ready' button. Removes the start again button
+if playing again. Calls the function for first question */
+function startQuiz() {
   ready.removeEventListener("click", startQuiz);
   introText.style.display = "none";
   ready.style.display = "none";
@@ -394,9 +397,6 @@ function startQuiz(){
   document.getElementById("parent").style.display = "block";
   showQuestion();
   }
-
-
-
 
 /* This functions decides if there is a further question to display,
 or to display the result of the quiz */
@@ -408,8 +408,8 @@ function showQuestion() {
     }
   }
 
-/*Calls the text of the next question, and
-populates the buttons with the possible answers */
+/*Calls the text of the next question, and shows
+and populates the buttons with the possible answers */
 function displayNextQuestion() {
   currentQuestion = questions[currentIndex];
   questionText.innerHTML = currentQuestion.question;
@@ -435,20 +435,27 @@ function displayResult() {
     startAgain.style.display = "block";
 }
 
+/* The function checks the selected answer. The function then checks the text 
+of the selected answer matches the correct answer. Following providing
+feedback on the right or wrong answr by turning the selected button green or red
+briefly (using a timeout), the function increments the index to the next question, 
+and calls the function to display the next question, or result. */
 function checkAnswer(e) {
     const selectedAnswer = e.target;
     const isCorrect = currentQuestion.answers.some(answer => answer.text === selectedAnswer.textContent && answer.correct);
 
+  // if correct button turns briefly green, or red if incorrect
   if (isCorrect) {
     selectedAnswer.classList.add("green-for-correct");}
     else {
       selectedAnswer.classList.add("red-for-incorrect");
     }
-  setTimeout(() => {
+    setTimeout(() => {
     selectedAnswer.classList.remove("green-for-correct");
     selectedAnswer.classList.remove("red-for-incorrect");
     currentIndex++;
 
+  // Increment number of correct or incorrect answers
   if (isCorrect) {
     correctAnswers++;
   } else {
@@ -459,12 +466,13 @@ function checkAnswer(e) {
 }, 750);
 }
 
-// Open quiz area on click of 'I'm Ready' button
+// Opens quiz area on click of 'I'm Ready' button.
 ready.addEventListener("click", startQuiz);
 
 /* Start again button resets the quiz. It resets the
 counting variables to the beginning. Returns 
-to the first question, and resets correct answers */
+to the first question, and resets correct answers,
+and removes the result text. */
 startAgain.addEventListener("click", () => {
   currentIndex = 0;
   correctAnswers = 0;

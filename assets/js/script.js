@@ -362,7 +362,7 @@ const questions = [
   { text: "couldn't have", correct: false},
 ]
 },
-]
+];
 
 // Set event listeners for selecting answers
 document.addEventListener("DOMContentLoaded", function () {
@@ -388,10 +388,10 @@ function startQuiz(){
   ready.removeEventListener("click", startQuiz);
   introText.style.display = "none";
   ready.style.display = "none";
-  startAgain.style.display = "none"
+  startAgain.style.display = "none";
   document.getElementById("parent").style.display = "block";
   showQuestion();
-  };
+  }
 
 // Display question and populate answer buttons with possible answers
 
@@ -455,8 +455,8 @@ function checkAnswer(e) {
 
 // Start quiz on click of 'I'm Ready' button
 ready.addEventListener("click", startQuiz);
-// event listener to reset
 
+// start again button to reset quiz to beginning
 startAgain.addEventListener("click", () => {
   currentIndex = 0;
   correctAnswers = 0;

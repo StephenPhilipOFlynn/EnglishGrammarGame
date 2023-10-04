@@ -109,3 +109,13 @@ body {
     padding: 5%;
     color: #ffffff;
 }
+
+/* adding colours to buttons on correct or incorrect answers */
+
+.green-for-correct {
+    background-color: #568203;
+}
+
+.red-for-incorrect {
+    background-color: #c94f1b;
+}

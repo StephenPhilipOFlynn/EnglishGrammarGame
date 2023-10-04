@@ -429,11 +429,18 @@ function displayResult() {
 }
 
 function checkAnswer(e) {
-  /* check answer and go to next question */
-  const selectedAnswer = e.target.textContent;
-  const isCorrect = currentQuestion.answers.some(answer => answer.text === selectedAnswer && answer.correct);
+    const selectedAnswer = e.target;
+    const isCorrect = currentQuestion.answers.some(answer => answer.text === selectedAnswer.textContent && answer.correct);
 
-  currentIndex++;
+  if (isCorrect) {
+    selectedAnswer.classList.add("green-for-correct");}
+    else {
+      selectedAnswer.classList.add("red-for-incorrect");
+    }
+  setTimeout(() => {
+    selectedAnswer.classList.remove("green-for-correct");
+    selectedAnswer.classList.remove("red-for-incorrect");
+    currentIndex++;
 
   if (isCorrect) {
     correctAnswers++;
@@ -442,6 +449,7 @@ function checkAnswer(e) {
   }
 
   showQuestion();
+}, 750);
 }
 
 // Start quiz on click of 'I'm Ready' button

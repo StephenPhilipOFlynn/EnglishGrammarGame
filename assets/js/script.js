@@ -455,7 +455,14 @@ function checkAnswer(e) {
 // Start quiz on click of 'I'm Ready' button
 ready.addEventListener("click", startQuiz);
 // event listener to reset
-// startAgain.addEventListener("click", startQuiz);
+
+startAgain.addEventListener("click", () => {
+  currentIndex = 0;
+  correctAnswers = 0;
+  incorrectAnswers = 0;
+  result.textContent = "";
+  startQuiz();
+});
 
 
 

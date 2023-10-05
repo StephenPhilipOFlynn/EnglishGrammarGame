@@ -2,7 +2,9 @@
 
 Features
 Once the user confirms via a button their intention to play, a question area opens.
-![question box](https://github.com/StephenPhilipOFlynn/EnglishGrammarGame/assets/124165807/7552b929-9ad1-4aa2-8a81-00f02781808d)
+
+![quiz](https://github.com/StephenPhilipOFlynn/EnglishGrammarGame/assets/124165807/a1159bc5-253b-4acd-a510-d045c962000e)
+
 The quiz begins with questions which an elementary-level student may be able to answer. There are 45 questions in total, and the questions get gradually harder, with the final questions being more suitable for upper-intermediate or advanced level English students. When selecting each answer, the answer button briefly turns green for a correct answer, or red for an incorrect answer, to provide the user feedback on their choice. However, if an incorrect answer is given, the correct answers is not confirmed, allowing for more replay value. 
 At the end of the quiz, the user's score is displayed out of the total number of questions.
 The user will also be informed about what their score may indicate about their level of grammar, from 3 possible answer bands: pre-intermediate or lower, intermediate, or upper-intermediate and advanced.

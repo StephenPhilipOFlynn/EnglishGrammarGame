@@ -6,6 +6,7 @@ The quiz begins with questions which an elementary-level student may be able to 
 At the end of the quiz, the user's score is displayed out of the total number of questions.
 The user will also be informed about what their score may indicate about their level of grammar, from 3 possible answer bands: pre-intermediate or lower, intermediate, or upper-intermediate and advanced.
 After completing the quiz, the number of correct answers estimates the user's suggested grammar level. This feature was tested with English language student to ensure the banding is appropriate.
+![result](https://github.com/StephenPhilipOFlynn/EnglishGrammarGame/assets/124165807/532f69d0-1b21-41a0-9873-772acf3a3018)
 
 Upon completion of the quiz, a 'play again' button appears, allowing the option to reset the quiz and start again. 
 Mock social media links are also included, to suggest engaging with future updates to the quiz, or for sharing ones score.

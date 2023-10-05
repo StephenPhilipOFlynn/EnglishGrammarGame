@@ -17,6 +17,8 @@ After completing the quiz, the number of correct answers estimates the user's su
 Upon completion of the quiz, a 'play again' button appears, allowing the option to reset the quiz and start again. 
 Mock social media links are also included, to suggest engaging with future updates to the quiz, or for sharing ones score.
 
+![social media links](https://github.com/StephenPhilipOFlynn/EnglishGrammarGame/assets/124165807/3bed28e9-ee00-447b-82e1-fe0ed7da29fd)
+
 Issues
 Deployment of the website was delayed by a bug which lead to double incrementation of the code. This lead to the redesign of the structure of the quiz. I am grateful for the support of the Code Institute tutor Martin, who suggested setting the event listeners only on loading of the page, that helped resolve this issue.
 

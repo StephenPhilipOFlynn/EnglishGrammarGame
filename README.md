@@ -1,5 +1,7 @@
 "The English Grammar Quiz" is a website designed to test the user's English grammar. The website is designed as a resource for English language students and teachers, in order to assess the user's understanding of grammatical concepts. The website is designed to be an online equivalent of the placement tests used for assessing prospective students grammar, or to assess their progress.
 
+![start page](https://github.com/StephenPhilipOFlynn/EnglishGrammarGame/assets/124165807/415547a2-5f3d-4038-86b6-2abb07bae7ef)
+
 Features
 Once the user confirms via a button their intention to play, a question area opens.
 

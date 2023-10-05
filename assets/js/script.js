@@ -395,7 +395,7 @@ const buttons = document.querySelectorAll(".button");
 const result = document.getElementById("result");
 const startAgain = document.getElementById("startAgain");
 
-/* Removes the intro text and 'I'm Ready' button. Removes the start again button
+/* Removes the intro text and 'Start Quiz' button. Removes the start again button
 if playing again. Calls the function for first question */
 function startQuiz() {
   ready.removeEventListener("click", startQuiz);
@@ -432,13 +432,13 @@ function displayNextQuestion() {
 display a different message. Also displays the start again button */
 function displayResult() {
   if (correctAnswers >= 38) {
-    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
+    result.textContent = `Congrats you have finished the quiz! You scored ${correctAnswers} out of 45.\
     Wow! Your grammar knowledge is at upper-intermediate or advanced level. Impressive!`;} 
-    else if (correctAnswers >= 28) {
-    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
+    else if (correctAnswers >= 27) {
+    result.textContent = `Congrats you have finished the quiz! You scored ${correctAnswers} out of 45.\
     Well done! Your grammar knowledge is at an intermediate level or above. Keep working hard and you will improve!`;}
     else {
-      result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
+      result.textContent = `Congrats you have finished the quiz! You scored ${correctAnswers} out of 45.\
       We estimate your grammar is at pre-intermediate level or below. Keep working hard and you will improve!`;}
     startAgain.style.display = "block";
 }

@@ -25,6 +25,9 @@ Deployment of the website was delayed by a bug which lead to double incrementati
 Deployment
 The website was deployed on Github pages on the 5th October 2023.
 
+Future Features
+A future version of the website will have a larger question bank, and use a math floor operation to randomly selected questions from within the question bank, to provide more replay value to the user.
+
 Testing
 The website has been manually tested on mobile phones, ipad size devices, a laptop and monitors to ensure that the quiz is functional on all device sizes.
 Further testing by English language students led to adjustment of the outcome message bands. The HTML and CSS code was checked against validators with no issues. The javascript code was checked in JShint with no significant issues, only the use of ES6 noted.

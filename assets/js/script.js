@@ -362,6 +362,14 @@ const questions = [
   { text: "couldn't have", correct: false},
 ]
 },
+{
+  question: "None display array",
+  answers: [
+  { text: " ", correct: true},
+  { text: " ", correct: false},
+  { text: " ", correct: false},
+]
+},
 ];
 
 // Set event listeners for selecting answers
@@ -424,13 +432,13 @@ function displayNextQuestion() {
 display a different message. Also displays the start again button */
 function displayResult() {
   if (correctAnswers >= 38) {
-    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
     Wow! Your grammar knowledge is at upper-intermediate or advanced level. Impressive!`;} 
     else if (correctAnswers >= 28) {
-    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+    result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
     Well done! Your grammar knowledge is at an intermediate level or above. Keep working hard and you will improve!`;}
     else {
-      result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of ${questions.length}.\
+      result.textContent = `Congrats you have finished the test! You scored ${correctAnswers} out of 45.\
       We estimate your grammar is at pre-intermediate level or below. Keep working hard and you will improve!`;}
     startAgain.style.display = "block";
 }

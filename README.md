@@ -22,7 +22,7 @@ Further testing by English language students led to adjustment of the outcome me
 
 Credits
 
-Guidance from Martin at Code Institute on guidance on resolving a technical bug
+Guidance from Martin at Code Institute on guidance on resolving a technical bug.
 
 Inspiration for grammatical concepts for creating questions 
 1. Language Hub Placement test
@@ -32,7 +32,7 @@ Inspiration for grammatical concepts for creating questions
 5. https://all.ie/english-level-test-for-adults/
 
 
-Unsplash Photos - Free Download and Licence for Personal Projects
+Unsplash Photos download and licence for personal projects.
 Photo by Belinda Fewings
 Photo by Annie Spratt
 Photo by Joseph Pearson
@@ -41,3 +41,4 @@ Photo by Shubham Bochiwal
 Photo by Arthur Poulin
 Photo by Matthew Feeney
 Photo by Priscilla Du Preez (x2)
+Further 10 images from Shuttershock - download and licence for personal projects.
